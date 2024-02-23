@@ -252,11 +252,11 @@ theme.mail = lain.widget.imap({
 
 -- MEM
 --local memicon = wibox.widget.imagebox(theme.widget_mem)
---local mem = lain.widget.mem({
---    settings = function()
---        widget:set_markup(markup.font(theme.font, "Mem: " .. mem_now.used .. "Mb" ))
---    end
---})
+local mem = lain.widget.mem({
+    settings = function()
+        widget:set_markup(markup.font(theme.font, "Mem: " .. mem_now.used .. "Mb" ))
+    end
+})
 
 -- CPU
 --local cpuicon = wibox.widget.imagebox(theme.widget_cpu)
@@ -475,8 +475,8 @@ function theme.at_screen_connect(s)
             --}),
             mysep,
             --memicon,
-            --mem.widget,
-            --mysep,
+            mem.widget,
+            mysep,
             --arrl_ld,
             --arrl_dl,
             --tempicon,
